@@ -765,114 +765,178 @@ await import("//videprints.com/cdn/shopifycloud/shop-js/modules/v2/chunk.common_
   <div class="page-container" id="PageContainer">
     <main class="main-content relative" id="MainContent" role="main">
 
-      <style>
-        .faq-item summary::-webkit-details-marker {
-          display: none;
-        }
-        .faq-item summary::marker {
-          display: none;
-        }
-        .faq-item summary {
-          user-select: none;
-        }
-        .faq-item summary:hover {
-          opacity: 0.8;
-        }
-        .faq-item[open] summary span:last-child {
-          transform: rotate(45deg);
-        }
-        .faq-item[open] summary span:last-child {
-          transition: transform 0.2s;
-        }
-      </style>
-      <div class="page-width" style="padding: 64px 0;">
-        <h1 class="heading title-lg">Добри въпроси, които зададохте</h1>
-        <div class="rte body" style="margin-top: 24px; margin-bottom: 48px;">
-          <p>Между другото, ако не намерихте отговора на вашия въпрос, нашите представители ще се радват да отговорят на всичко.</p>
-          <p>Чувствайте се свободни да се свържете с нас.</p>
-        </div>
-        <div class="rte body" style="display: flex; flex-direction: column; gap: 16px;">
-          <details class="faq-item" style="border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px; padding-top: 16px;">
-            <summary style="font-weight: 700; font-size: 1.125rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
-              <span>Как работи процесът на поръчка?</span>
-              <span style="font-size: 1.5rem; line-height: 1;">+</span>
-            </summary>
-            <div style="margin-top: 12px; padding-left: 0;">
-              <p>Извършвате покупката в сайта и получавате връзка за качване на снимките и видеоклиповете.</p>
-            </div>
-          </details>
-          <details class="faq-item" style="border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px; padding-top: 16px;">
-            <summary style="font-weight: 700; font-size: 1.125rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
-              <span>Какво е необходимо за създаване на VIDE снимка?</span>
-              <span style="font-size: 1.5rem; line-height: 1;">+</span>
-            </summary>
-            <div style="margin-top: 12px; padding-left: 0;">
-              <p>Това е много просто, всичко, от което се нуждаете, е видеоклип и снимка.</p>
-            </div>
-          </details>
-          <details class="faq-item" style="border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px; padding-top: 16px;">
-            <summary style="font-weight: 700; font-size: 1.125rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
-              <span>Възможно ли е да вмъкнете повече от един видеоклип във всяка снимка?</span>
-              <span style="font-size: 1.5rem; line-height: 1;">+</span>
-            </summary>
-            <div style="margin-top: 12px; padding-left: 0;">
-              <p>Разбира се, че е възможно, предлагаме услуга за редактиране на видеоклипове и можете също да редактирате сами и да ни изпратите готов видеоклип.</p>
-            </div>
-          </details>
-          <details class="faq-item" style="border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px; padding-top: 16px;">
-            <summary style="font-weight: 700; font-size: 1.125rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
-              <span>Има ли ограничение за продължителността на видеоклипа?</span>
-              <span style="font-size: 1.5rem; line-height: 1;">+</span>
-            </summary>
-            <div style="margin-top: 12px; padding-left: 0;">
-              <p>Препоръчителната продължителност на видеоклипа е до една минута.</p>
-            </div>
-          </details>
-          <details class="faq-item" style="border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px; padding-top: 16px;">
-            <summary style="font-weight: 700; font-size: 1.125rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
-              <span>Какви са сроковете за доставка?</span>
-              <span style="font-size: 1.5rem; line-height: 1;">+</span>
-            </summary>
-            <div style="margin-top: 12px; padding-left: 0;">
-              <p>Сроковете за обработка на поръчките могат временно да се удължат и могат да продължат до <strong>14 работни дни</strong>.</p>
-              <p>Правим максимум усилия да осигурим най-добрата услуга и благодарим за търпението ви.</p>
-            </div>
-          </details>
-          <details class="faq-item" style="border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px; padding-top: 16px;">
-            <summary style="font-weight: 700; font-size: 1.125rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
-              <span>Има ли възможност за самопредаване?</span>
-              <span style="font-size: 1.5rem; line-height: 1;">+</span>
-            </summary>
-            <div style="margin-top: 12px; padding-left: 0;">
-              <p>Разбира се, можете да маркирате опцията в процеса на покупка и ще получите адрес за самопредаване в централния район.</p>
-            </div>
-          </details>
-          <details class="faq-item" style="border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px; padding-top: 16px;">
-            <summary style="font-weight: 700; font-size: 1.125rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
-              <span>Как се гледа видеоклипът?</span>
-              <span style="font-size: 1.5rem; line-height: 1;">+</span>
-            </summary>
-            <div style="margin-top: 12px; padding-left: 0;">
-              <p>С помощта на нашето приложение можете да сканирате снимката и да се насладите на изключително изживяване.</p>
-            </div>
-          </details>
-          <details class="faq-item" style="border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px; padding-top: 16px;">
-            <summary style="font-weight: 700; font-size: 1.125rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
-              <span>Използването на приложението струва ли пари?</span>
-              <span style="font-size: 1.5rem; line-height: 1;">+</span>
-            </summary>
-            <div style="margin-top: 12px; padding-left: 0;">
-              <p>Не, използването на приложението е безплатно.</p>
-            </div>
-          </details>
-        </div>
-        <div class="rte body" style="margin-top: 48px; text-align: center;">
-          <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 16px;">Не намерихте отговора?</h2>
-          <p style="margin-bottom: 24px;">Изпратете ни съобщение или оставете данни и ще се радваме да ви помогнем с всеки въпрос, който възникне!</p>
+      <div id="shopify-section-faq" class="shopify-section"><style data-shopify>#shopify-section-faq {
+    --section-padding-top: 72px;
+    --section-padding-bottom: 72px;
+    --color-text: 198 1 90;
+    --color-background: 255 255 255;
+  }</style>
+<div class="section section--padding">
+  <div class="page-width page-width--narrow relative">
+    <div class="title-wrapper leading-none grid gap-4 text-center md:items-center">
+      <h2 class="heading font-bold title-md">
+        <split-words class="split-words flex flex-wrap" data-animate="fade-up-large">Добри въпроси, които зададохте</split-words>
+      </h2>
+      <div class="page-width--narrow rte leading-normal text-sm xl:text-base">
+        <p>Между другото, ако не намерихте отговора на вашия въпрос, нашите представители ще се радват да отговорят на всичко.</p><p>Чувствайте се свободни да се свържете с нас.</p>
+      </div>
+    </div>
+    <div class="faqs with-border flex flex-col lg:flex-row relative z-1">
+      <div class="grow grid gap-8 md:gap-12">
+        <div class="faq">
+          <div class="accordion">
+            <details class="details" is="accordion-details">
+              <summary class="details__summary flex items-center justify-between gap-2 cursor-pointer">
+                <span class="text-base lg:text-lg xl:text-xl font-medium leading-tight">
+                  <strong>Как работи процесът на поръчка?</strong>
+                </span>
+                <svg class="icon icon-plus-alt icon-xs flex-auto" viewBox="0 0 24 24" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+    </svg>
+              </summary>
+              <div class="details__content text-base rte">
+                <p>Извършвате покупката в сайта и получавате връзка за качване на снимките и видеоклиповете.</p>
+              </div>
+            </details>
+          </div>
+          <div class="accordion">
+            <details class="details" is="accordion-details">
+              <summary class="details__summary flex items-center justify-between gap-2 cursor-pointer">
+                <span class="text-base lg:text-lg xl:text-xl font-medium leading-tight">
+                  <strong>Какво е необходимо за създаване на VIDE снимка?</strong>
+                </span>
+                <svg class="icon icon-plus-alt icon-xs flex-auto" viewBox="0 0 24 24" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+    </svg>
+              </summary>
+              <div class="details__content text-base rte">
+                <p>Това е много просто, всичко, от което се нуждаете, е видеоклип и снимка</p>
+              </div>
+            </details>
+          </div>
+          <div class="accordion">
+            <details class="details" is="accordion-details">
+              <summary class="details__summary flex items-center justify-between gap-2 cursor-pointer">
+                <span class="text-base lg:text-lg xl:text-xl font-medium leading-tight">
+                  <strong>Възможно ли е да вмъкнете повече от един видеоклип във всяка снимка?</strong>
+                </span>
+                <svg class="icon icon-plus-alt icon-xs flex-auto" viewBox="0 0 24 24" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+    </svg>
+              </summary>
+              <div class="details__content text-base rte">
+                <p>Разбира се, че е възможно, предлагаме услуга за редактиране на видеоклипове и можете също да редактирате сами и да ни изпратите готов видеоклип.</p>
+              </div>
+            </details>
+          </div>
+          <div class="accordion">
+            <details class="details" is="accordion-details">
+              <summary class="details__summary flex items-center justify-between gap-2 cursor-pointer">
+                <span class="text-base lg:text-lg xl:text-xl font-medium leading-tight">
+                  <strong>Има ли ограничение за продължителността на видеоклипа?</strong>
+                </span>
+                <svg class="icon icon-plus-alt icon-xs flex-auto" viewBox="0 0 24 24" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+    </svg>
+              </summary>
+              <div class="details__content text-base rte">
+                <p>Препоръчителната продължителност на видеоклипа е до една минута</p>
+              </div>
+            </details>
+          </div>
+          <div class="accordion">
+            <details class="details" is="accordion-details">
+              <summary class="details__summary flex items-center justify-between gap-2 cursor-pointer">
+                <span class="text-base lg:text-lg xl:text-xl font-medium leading-tight">
+                  <strong>Какви са сроковете за доставка?</strong>
+                </span>
+                <svg class="icon icon-plus-alt icon-xs flex-auto" viewBox="0 0 24 24" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+    </svg>
+              </summary>
+              <div class="details__content text-base rte">
+                <p>Сроковете за обработка на поръчките могат временно да се удължат и могат да продължат до <strong>14 работни дни.</strong><br/><br/>Правим максимум усилия да осигурим най-добрата услуга и благодарим за търпението ви. </p>
+              </div>
+            </details>
+          </div>
+          <div class="accordion">
+            <details class="details" is="accordion-details">
+              <summary class="details__summary flex items-center justify-between gap-2 cursor-pointer">
+                <span class="text-base lg:text-lg xl:text-xl font-medium leading-tight">
+                  <strong>Има ли възможност за самопредаване?</strong>
+                </span>
+                <svg class="icon icon-plus-alt icon-xs flex-auto" viewBox="0 0 24 24" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+    </svg>
+              </summary>
+              <div class="details__content text-base rte">
+                <p>Разбира се, можете да маркирате опцията в процеса на покупка и ще получите адрес за самопредаване в централния район.</p>
+              </div>
+            </details>
+          </div>
+          <div class="accordion">
+            <details class="details" is="accordion-details">
+              <summary class="details__summary flex items-center justify-between gap-2 cursor-pointer">
+                <span class="text-base lg:text-lg xl:text-xl font-medium leading-tight">
+                  <strong>Как се гледа видеоклипът?</strong>
+                </span>
+                <svg class="icon icon-plus-alt icon-xs flex-auto" viewBox="0 0 24 24" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+    </svg>
+              </summary>
+              <div class="details__content text-base rte">
+                <p>С помощта на нашето приложение можете да сканирате снимката и да се насладите на изключително изживяване.</p>
+              </div>
+            </details>
+          </div>
+          <div class="accordion">
+            <details class="details" is="accordion-details">
+              <summary class="details__summary flex items-center justify-between gap-2 cursor-pointer">
+                <span class="text-base lg:text-lg xl:text-xl font-medium leading-tight">
+                  <strong>Използването на приложението струва ли пари?</strong>
+                </span>
+                <svg class="icon icon-plus-alt icon-xs flex-auto" viewBox="0 0 24 24" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+    </svg>
+              </summary>
+              <div class="details__content text-base rte">
+                <p>Не, използването на приложението е безплатно.</p>
+              </div>
+            </details>
+          </div>
         </div>
       </div>
-    
-</main>
+    </div>
+  </div>
+</div>
+</div>
+      <div id="shopify-section-images-with-text-overlay" class="shopify-section"><style data-shopify>#shopify-section-images-with-text-overlay {
+    --section-padding-top: 0px;
+    --section-padding-bottom: 0px;
+    --color-text: 255 255 255;
+    --color-background: 23 23 23;
+  }</style>
+<div class="section section--padding" style="padding-top: 0; padding-bottom: 0;">
+  <div class="page-width page-width--full relative">
+    <div class="images-with-text-overlay relative" style="min-height: 650px;">
+      <div class="absolute inset-0 z-0">
+        <img src="//videprints.com/cdn/shop/files/vide-09619_873573a2-61fa-4473-83ba-239603046efa.jpg" alt="" class="w-full h-full object-cover" style="min-height: 650px;" is="lazy-image">
+      </div>
+      <div class="relative z-1 flex items-center justify-center" style="min-height: 650px; padding: 64px 20px;">
+        <div class="page-width--small text-center">
+          <h2 class="heading title-lg tracking-heading font-bold leading-none">
+            <split-words class="split-words flex flex-wrap" data-animate="fade-up-large">Не намерихте отговора?</split-words>
+          </h2>
+          <div class="rte text-sm" style="max-width: 32rem; margin: 0 auto; margin-top: 16px;">
+            <p>Изпратете ни съобщение или оставете данни и ще се радваме да ви помогнем с всеки въпрос, който възникне!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+    </main>
 
     <footer-group class="footer-group block w-full"><!-- BEGIN sections: footer-group -->
 <div id="shopify-section-sections--25703129907509__footer" class="shopify-section shopify-section-group-footer-group"><style data-shopify>#shopify-section-sections--25703129907509__footer {
