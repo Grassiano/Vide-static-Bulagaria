@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en" dir="rtl">
+<html class="no-js" lang="bg" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -765,17 +765,110 @@ await import("//videprints.com/cdn/shopifycloud/shop-js/modules/v2/chunk.common_
   <div class="page-container" id="PageContainer">
     <main class="main-content relative" id="MainContent" role="main">
 
+      <style>
+        .faq-item summary::-webkit-details-marker {
+          display: none;
+        }
+        .faq-item summary::marker {
+          display: none;
+        }
+        .faq-item summary {
+          user-select: none;
+        }
+        .faq-item summary:hover {
+          opacity: 0.8;
+        }
+        .faq-item[open] summary span:last-child {
+          transform: rotate(45deg);
+        }
+        .faq-item[open] summary span:last-child {
+          transition: transform 0.2s;
+        }
+      </style>
       <div class="page-width" style="padding: 64px 0;">
-        <h1 class="heading title-lg">Често задавани въпроси</h1>
-        <div class="rte body">
-          <h3>Какво представлява VIDE?</h3>
-          <p>VIDE превръща снимката в видео при сканиране – нов начин да преживявате спомените си.</p>
-          <h3>За какви събития работите?</h3>
-          <p>Сватби, частни партита, корпоративни събития, абитуриентски балове и още.</p>
-          <h3>Как получаваме резултата?</h3>
-          <p>Получавате дигитална галерия и физически снимки с QR код към видеата.</p>
-          <h3>Колко време отнема?</h3>
-          <p>Свържете се с нас за конкретни срокове според пакета.</p>
+        <h1 class="heading title-lg">Добри въпроси, които зададохте</h1>
+        <div class="rte body" style="margin-top: 24px; margin-bottom: 48px;">
+          <p>Между другото, ако не намерихте отговора на вашия въпрос, нашите представители ще се радват да отговорят на всичко.</p>
+          <p>Чувствайте се свободни да се свържете с нас.</p>
+        </div>
+        <div class="rte body" style="display: flex; flex-direction: column; gap: 16px;">
+          <details class="faq-item" style="border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px; padding-top: 16px;">
+            <summary style="font-weight: 700; font-size: 1.125rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
+              <span>Как работи процесът на поръчка?</span>
+              <span style="font-size: 1.5rem; line-height: 1;">+</span>
+            </summary>
+            <div style="margin-top: 12px; padding-left: 0;">
+              <p>Извършвате покупката в сайта и получавате връзка за качване на снимките и видеоклиповете.</p>
+            </div>
+          </details>
+          <details class="faq-item" style="border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px; padding-top: 16px;">
+            <summary style="font-weight: 700; font-size: 1.125rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
+              <span>Какво е необходимо за създаване на VIDE снимка?</span>
+              <span style="font-size: 1.5rem; line-height: 1;">+</span>
+            </summary>
+            <div style="margin-top: 12px; padding-left: 0;">
+              <p>Това е много просто, всичко, от което се нуждаете, е видеоклип и снимка.</p>
+            </div>
+          </details>
+          <details class="faq-item" style="border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px; padding-top: 16px;">
+            <summary style="font-weight: 700; font-size: 1.125rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
+              <span>Възможно ли е да вмъкнете повече от един видеоклип във всяка снимка?</span>
+              <span style="font-size: 1.5rem; line-height: 1;">+</span>
+            </summary>
+            <div style="margin-top: 12px; padding-left: 0;">
+              <p>Разбира се, че е възможно, предлагаме услуга за редактиране на видеоклипове и можете също да редактирате сами и да ни изпратите готов видеоклип.</p>
+            </div>
+          </details>
+          <details class="faq-item" style="border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px; padding-top: 16px;">
+            <summary style="font-weight: 700; font-size: 1.125rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
+              <span>Има ли ограничение за продължителността на видеоклипа?</span>
+              <span style="font-size: 1.5rem; line-height: 1;">+</span>
+            </summary>
+            <div style="margin-top: 12px; padding-left: 0;">
+              <p>Препоръчителната продължителност на видеоклипа е до една минута.</p>
+            </div>
+          </details>
+          <details class="faq-item" style="border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px; padding-top: 16px;">
+            <summary style="font-weight: 700; font-size: 1.125rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
+              <span>Какви са сроковете за доставка?</span>
+              <span style="font-size: 1.5rem; line-height: 1;">+</span>
+            </summary>
+            <div style="margin-top: 12px; padding-left: 0;">
+              <p>Сроковете за обработка на поръчките могат временно да се удължат и могат да продължат до <strong>14 работни дни</strong>.</p>
+              <p>Правим максимум усилия да осигурим най-добрата услуга и благодарим за търпението ви.</p>
+            </div>
+          </details>
+          <details class="faq-item" style="border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px; padding-top: 16px;">
+            <summary style="font-weight: 700; font-size: 1.125rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
+              <span>Има ли възможност за самопредаване?</span>
+              <span style="font-size: 1.5rem; line-height: 1;">+</span>
+            </summary>
+            <div style="margin-top: 12px; padding-left: 0;">
+              <p>Разбира се, можете да маркирате опцията в процеса на покупка и ще получите адрес за самопредаване в централния район.</p>
+            </div>
+          </details>
+          <details class="faq-item" style="border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px; padding-top: 16px;">
+            <summary style="font-weight: 700; font-size: 1.125rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
+              <span>Как се гледа видеоклипът?</span>
+              <span style="font-size: 1.5rem; line-height: 1;">+</span>
+            </summary>
+            <div style="margin-top: 12px; padding-left: 0;">
+              <p>С помощта на нашето приложение можете да сканирате снимката и да се насладите на изключително изживяване.</p>
+            </div>
+          </details>
+          <details class="faq-item" style="border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 16px; padding-top: 16px;">
+            <summary style="font-weight: 700; font-size: 1.125rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
+              <span>Използването на приложението струва ли пари?</span>
+              <span style="font-size: 1.5rem; line-height: 1;">+</span>
+            </summary>
+            <div style="margin-top: 12px; padding-left: 0;">
+              <p>Не, използването на приложението е безплатно.</p>
+            </div>
+          </details>
+        </div>
+        <div class="rte body" style="margin-top: 48px; text-align: center;">
+          <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 16px;">Не намерихте отговора?</h2>
+          <p style="margin-bottom: 24px;">Изпратете ни съобщение или оставете данни и ще се радваме да ви помогнем с всеки въпрос, който възникне!</p>
         </div>
       </div>
     
