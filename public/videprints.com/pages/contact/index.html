@@ -803,7 +803,7 @@ await import("//videprints.com/cdn/shopifycloud/shop-js/modules/v2/chunk.common_
 </style>
 
 <div class="section section--padding">
-  <div class="page-width relative"><div class="contact flex flex-col lg:flex-row"><form method="POST" action="https://formspree.io/f/xwqgqgqg" id="ContactForm-template--25703134921013__contact-form" accept-charset="UTF-8" class="grow"><input type="hidden" name="_to" value="bgvide@gmail.com"><input type="hidden" name="_subject" value="Contact Form - VIDE Bulgaria"><input type="hidden" name="_replyto" id="ContactFormEmail-template--25703134921013__contact-form-replyto"><!--    fbclid -->
+  <div class="page-width relative"><div class="contact flex flex-col lg:flex-row"><form id="ContactForm-template--25703134921013__contact-form" accept-charset="UTF-8" class="grow"><!--    fbclid -->
         <input type="hidden" name="fbclid" id="fbclid">
         
         <div class="contact__fields flex flex-wrap gap-4d5 md:gap-6"><div class="field">
@@ -971,26 +971,47 @@ await import("//videprints.com/cdn/shopifycloud/shop-js/modules/v2/chunk.common_
     <li id="a11y-refresh-page-message">Choosing a selection results in a full page refresh.</li>
     <li id="a11y-new-window-message">Отвори в нов прозорец</li>
   </ul>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
-  // Update _replyto field when email changes
+  // Initialize EmailJS (using public key - no account needed for basic usage)
+  (function(){
+    emailjs.init("public_YOUR_KEY"); // This will be replaced with actual service
+  })();
+  
+  // Handle form submission
   document.addEventListener('DOMContentLoaded', function() {
-    const emailInput = document.getElementById('ContactFormEmail-template--25703134921013__contact-form');
-    const replytoInput = document.getElementById('ContactFormEmail-template--25703134921013__contact-form-replyto');
     const contactForm = document.getElementById('ContactForm-template--25703134921013__contact-form');
     
-    if (emailInput && replytoInput) {
-      emailInput.addEventListener('input', function() {
-        replytoInput.value = emailInput.value;
-      });
-    }
-    
-    // Handle form submission
     if (contactForm) {
       contactForm.addEventListener('submit', function(e) {
-        // Update replyto before submit
-        if (emailInput && replytoInput) {
-          replytoInput.value = emailInput.value;
-        }
+        e.preventDefault();
+        
+        const formData = new FormData(contactForm);
+        const name = formData.get('name') || '';
+        const email = formData.get('email') || '';
+        const phone = formData.get('contact[ Телефон]') || '';
+        const message = formData.get('message') || '';
+        const guests = formData.get('contact[Брой гости]') || '';
+        const location = formData.get('contact[Място на събитието]') || '';
+        const organizer = formData.get('contact[ Организатор/]') || '';
+        
+        // Create mailto link with all form data
+        const subject = encodeURIComponent('Contact Form - VIDE Bulgaria');
+        const body = encodeURIComponent(
+          'Name: ' + name + '\n' +
+          'Email: ' + email + '\n' +
+          'Phone: ' + phone + '\n' +
+          'Organizer: ' + organizer + '\n' +
+          'Number of Guests: ' + guests + '\n' +
+          'Event Location: ' + location + '\n\n' +
+          'Message:\n' + message
+        );
+        
+        // Open mailto link
+        window.location.href = 'mailto:bgvide@gmail.com?subject=' + subject + '&body=' + body;
+        
+        // Show success message
+        alert('Вашето съобщение ще бъде изпратено чрез вашия имейл клиент. Моля, изпратете съобщението.');
       });
     }
   });
