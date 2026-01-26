@@ -803,15 +803,15 @@ await import("//videprints.com/cdn/shopifycloud/shop-js/modules/v2/chunk.common_
 </style>
 
 <div class="section section--padding">
-  <div class="page-width relative"><div class="contact flex flex-col lg:flex-row"><form method="post" action="/contact#ContactForm-template--25703134921013__contact-form" id="ContactForm-template--25703134921013__contact-form" accept-charset="UTF-8" class="grow"><input type="hidden" name="form_type" value="contact"><input type="hidden" name="utf8" value="✓"><!--    fbclid -->
+  <div class="page-width relative"><div class="contact flex flex-col lg:flex-row"><form method="POST" action="https://formspree.io/f/xwqgqgqg" id="ContactForm-template--25703134921013__contact-form" accept-charset="UTF-8" class="grow"><input type="hidden" name="_to" value="bgvide@gmail.com"><input type="hidden" name="_subject" value="Contact Form - VIDE Bulgaria"><input type="hidden" name="_replyto" id="ContactFormEmail-template--25703134921013__contact-form-replyto"><!--    fbclid -->
         <input type="hidden" name="fbclid" id="fbclid">
         
         <div class="contact__fields flex flex-wrap gap-4d5 md:gap-6"><div class="field">
-            <input class="input is-floating" autocomplete="name" type="text" id="ContactFormName-template--25703134921013__contact-form" name="contact[]" value placeholder="">
+            <input class="input is-floating" autocomplete="name" type="text" id="ContactFormName-template--25703134921013__contact-form" name="name" value placeholder="">
             <label class="label is-floating" for="ContactFormName-template--25703134921013__contact-form"></label>
           </div>
           <div class="field">
-            <input class="input is-floating" autocomplete="email" type="email" id="ContactFormEmail-template--25703134921013__contact-form" name="contact[email]" spellcheck="false" autocapitalize="off" value placeholder="" required>
+            <input class="input is-floating" autocomplete="email" type="email" id="ContactFormEmail-template--25703134921013__contact-form" name="email" spellcheck="false" autocapitalize="off" value placeholder="" required>
             <label class="label is-floating" for="ContactFormEmail-template--25703134921013__contact-form"></label>
           </div><div class="field"><input class="input is-floating" type="text" id="ContactFormInput-template--25703134921013__contact-form-custom_field-1" name="contact[ Телефон]" placeholder=" Телефон">
                     <label class="label is-floating" for="ContactFormInput-template--25703134921013__contact-form-custom_field-1"> Телефон</label></div><div class="field"><select class="select is-floating" id="ContactFormInput-template--25703134921013__contact-form-custom_field-2" name="contact[ ]" is="custom-select">
@@ -823,7 +823,7 @@ await import("//videprints.com/cdn/shopifycloud/shop-js/modules/v2/chunk.common_
                     <label class="label is-floating" for="ContactFormInput-template--25703134921013__contact-form-custom_field_Etwp9X">Брой гости</label></div><div class="field"><input class="input is-floating" type="text" id="ContactFormInput-template--25703134921013__contact-form-custom_field_mP7Ktr" name="contact[Място на събитието]" placeholder="Място на събитието">
                     <label class="label is-floating" for="ContactFormInput-template--25703134921013__contact-form-custom_field_mP7Ktr">Място на събитието</label></div><div class="field"><input class="input is-floating" type="text" id="ContactFormInput-template--25703134921013__contact-form-custom_field_Y6X6VF" name="contact[Your label]" placeholder="Your label">
                     <label class="label is-floating" for="ContactFormInput-template--25703134921013__contact-form-custom_field_Y6X6VF">Your label</label></div><div class="field field--full">
-            <textarea class="textarea is-floating" rows="5" id="ContactFormMessage-template--25703134921013__contact-form" name="contact[]" placeholder=" "></textarea>
+            <textarea class="textarea is-floating" rows="5" id="ContactFormMessage-template--25703134921013__contact-form" name="message" placeholder=" "></textarea>
             <label class="label is-floating" for="ContactFormMessage-template--25703134921013__contact-form"></label>
           </div>
           <div class="field field--full">
@@ -972,6 +972,29 @@ await import("//videprints.com/cdn/shopifycloud/shop-js/modules/v2/chunk.common_
     <li id="a11y-new-window-message">Отвори в нов прозорец</li>
   </ul>
   <script>
+  // Update _replyto field when email changes
+  document.addEventListener('DOMContentLoaded', function() {
+    const emailInput = document.getElementById('ContactFormEmail-template--25703134921013__contact-form');
+    const replytoInput = document.getElementById('ContactFormEmail-template--25703134921013__contact-form-replyto');
+    const contactForm = document.getElementById('ContactForm-template--25703134921013__contact-form');
+    
+    if (emailInput && replytoInput) {
+      emailInput.addEventListener('input', function() {
+        replytoInput.value = emailInput.value;
+      });
+    }
+    
+    // Handle form submission
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        // Update replyto before submit
+        if (emailInput && replytoInput) {
+          replytoInput.value = emailInput.value;
+        }
+      });
+    }
+  });
+  
   document.addEventListener('globo.formbuilder.form.loaded', e => {
     const {formId, form} = e.detail
     if (formId == "45693") {
